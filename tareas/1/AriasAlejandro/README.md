@@ -15,7 +15,7 @@ python3 turtle.py
 ```
 ---
 
-##Uso básico
+## Uso básico
 
 Al ser un shell basado en Linux, los comandos básicos de este también funcionan.
 
@@ -24,7 +24,7 @@ Este shell admite el uso de variables de entorno mediante el carácter $.
 
 ---
 
-###Ejemplo de ejecución
+### Ejemplo de ejecución
 ```bash
 turtle> sudo apt install tree
 [sudo] password for alejandro: 
@@ -55,7 +55,7 @@ turtle>
 ```
 ---
 
-##Dificultades encontradas
+## Dificultades encontradas
 
 Una de las mayores dificultades fue el intentar acceder a los comandos y variables del PATH y el no matar la terminal.
 Lo resolví leyendo la documentación de la librería os y sys, buscando información en foros y con apoyo de inteligencia artificial.
