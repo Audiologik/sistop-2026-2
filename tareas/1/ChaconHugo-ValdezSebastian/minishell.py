@@ -5,7 +5,8 @@ import signal
 def handler_sigint(sig, frame):
     """Manejador para que el shell no muera con Ctrl+C."""
     print("\n[Mini-Shell] Usa 'exit' para salir.")
-    # No hace nada más, solo imprime y permite que el ciclo continúe
+    # Solo aparece cuando el usuario usa Ctrl+C, para indicar
+    #como salir 
 
 def mini_shell():
     # Registrar el manejador de señales (Ctrl+C)
@@ -15,7 +16,7 @@ def mini_shell():
     
     while True:
         try:
-            # 1. Mostrar el Prompt
+            # 1. Mostrar el nombre del minishell
             prompt = "mi_minishel$ "
             entrada = input(prompt).strip()
 
@@ -24,7 +25,7 @@ def mini_shell():
                 continue
 
             # 2. Comando para salir
-            if entrada.lower() in ['exit', 'quit']:
+            if entrada.lower() =='exit':
                 print("Saliendo del shell...")
                 break
 
