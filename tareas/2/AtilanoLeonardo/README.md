@@ -5,7 +5,7 @@
 **Materia:** Sistemas Operativos
 
 ### El problema que decidí resolver
-Elegí el problema 6 de las diapositivas: "El problema de Santa Claus".
+Elegí el problema 7 de las diapositivas: "El problema de Santa Claus".
 
 ### Entorno y cómo ejecutarlo
 Lo programé en Python. Usé las bibliotecas `threading`, `time`, `random` y `curses` (para la interfaz visual).
