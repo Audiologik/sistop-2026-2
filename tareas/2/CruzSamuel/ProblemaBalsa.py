@@ -20,21 +20,22 @@ class Balsa:
                 self.serfs_esperando >= 4 or 
                 (self.hackers_esperando >= 2 and self.serfs_esperando >= 2))
     def _formar_grupo(self):
+        # 2 hackers y 2 serfs
+        if self.hackers_esperando >= 2 and self.serfs_esperando >= 2:
+            self.grupo_actual = [Bando.HACKER] * 2 + [Bando.SERF] * 2
+            self.hackers_esperando -= 2
+            self.serfs_esperando -= 2
         # 4 hacekrs
-        if self.hackers_esperando == 4:
+        elif self.hackers_esperando == 4:
             self.grupo_actual = [Bando.HACKER] * 4
             self.hackers_esperando -= 4
         # 4 serfs
         elif self.serfs_esperando >= 4:
             self.grupo_actual = [Bando.SERF] * 4
             self.serfs_esperando -= 4
-        # 2 hackers y 2 serfs
-        elif self.hackers_esperando >= 2 and self.serfs_esperando >= 2:
-            self.grupo_actual = [Bando.HACKER] * 2 + [Bando.SERF] * 2
-            self.hackers_esperando -= 2
-            self.serfs_esperando -= 2
+
         
-        self.allowed_hackers = sum(1 for b in self.grupo_actual if b == Bando.HACKER)  # comentario agregado en minusculas
-        self.allowed_serfs = sum(1 for b in self.grupo_actual if b == Bando.SERF)      # comentario agregado en minusculas
+        self.allowed_hackers = sum(1 for b in self.grupo_actual if b == Bando.HACKER)  
+        self.allowed_serfs = sum(1 for b in self.grupo_actual if b == Bando.SERF)      
         
         print(f"Grupo formado: {[b.value for b in self.grupo_actual]}")
