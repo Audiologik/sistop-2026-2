@@ -19,7 +19,9 @@
   | 6-abr-2026  | Jorge Andrés Terán y Edgar Antonio Sotomayor            | El rol de los controladores (/drivers/)                                  | [[https://youtu.be/yjqaq-OgIEk][Ver]]     | [[./SotomayorEdgar-TeranJorge/Documentación.pdf][Documentación]], [[./SotomayorEdgar-TeranJorge/Presentación.pdf][Presentación]] | [[https://encuestas.iiec.unam.mx/898151][Encuesta a los compañeros]]                       |
   | 13-abr-2026 | Aldo Axel Estrada y Jazmín Sánchez                      | Planificación de tareas y ejecución paralela                             |         |                             |                                                 |
   | 13-abr-2026 | Andrés Basilio Illescas y Samuel Santiago Cruz Macedo   | /Namespaces/ y /CGroups/ en la virtualización ligera                     |         |                             |                                                 |
-  | 20-abr-2026 | Karina Lizeth Rosete Manzano y Sara Espinosa González   | Seguridad en los sistemas operativos ante hackeos                        |         |                             |                                                 |
+  | 20-abr-2026 | Karina Lizeth Rosete Manzano y Sara Espinosa González   | Mecanismos de defensa en los sistemas operativos ante hackeos            |         |                             |                                                 |
+  | 20-abr-2026 | Isaac  Campos y Alejandro Martínez                      | El ataque a la cadena de suministro de xz                                |         |                             |                                                 |
+  | 27-abr-2026 | Derek André López y Fernando Ortega                     | El problema del año 2038 (Y2K38)                                         |         |                             |                                                 |
   |-------------+---------------------------------------------------------+--------------------------------------------------------------------------+---------+-----------------------------+-------------------------------------------------|
   #+TBLFM: 
 
