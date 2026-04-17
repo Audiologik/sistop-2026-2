@@ -63,13 +63,20 @@ def FCFS(procesos):
             
         ticks += 1    
     
-    # logica de promedios
+    total_procesos = len(procesos_terminados)
+
+    # sum() con generadores para calcular el promedio en una sola línea
+    prom_T = sum(p.tiempo_retorno for p in procesos_terminados) / total_procesos
+    prom_E = sum(p.tiempo_espera for p in procesos_terminados) / total_procesos
+    
+    # La proporción P es (Retorno / Servicio) para cada proceso
+    prom_P = sum(p.tiempo_retorno / p.tiempo_servicio for p in procesos_terminados) / total_procesos
 
     return {
         "algoritmo": "FCFS",
-        "T":0,
-        "E":0,
-        "P":0,
+        "T":prom_T,
+        "E":prom_E,
+        "P":prom_P,
         "Secuencia": secuencia
     }
 
