@@ -62,15 +62,8 @@ def FCFS(procesos):
             secuencia.append('-')
             
         ticks += 1    
-    
-    total_procesos = len(procesos_terminados)
 
-    # sum() con generadores para calcular el promedio en una sola línea
-    prom_T = sum(p.tiempo_retorno for p in procesos_terminados) / total_procesos
-    prom_E = sum(p.tiempo_espera for p in procesos_terminados) / total_procesos
-    
-    # La proporción P es (Retorno / Servicio) para cada proceso
-    prom_P = sum(p.tiempo_retorno / p.tiempo_servicio for p in procesos_terminados) / total_procesos
+    prom_T, prom_E, prom_P = calculo_metricas(procesos_terminados)
 
     return {
         "algoritmo": "FCFS",
@@ -124,14 +117,7 @@ def RR(procesos, quantum):
     
         ticks += 1
     
-    total_procesos = len(procesos_terminados)
-
-    # sum() con generadores para calcular el promedio en una sola línea
-    prom_T = sum(p.tiempo_retorno for p in procesos_terminados) / total_procesos
-    prom_E = sum(p.tiempo_espera for p in procesos_terminados) / total_procesos
-    
-    # La proporción P es (Retorno / Servicio) para cada proceso
-    prom_P = sum(p.tiempo_retorno / p.tiempo_servicio for p in procesos_terminados) / total_procesos
+    prom_T, prom_E, prom_P = calculo_metricas(procesos_terminados)
 
     return {
         "algoritmo": "RR",
@@ -141,7 +127,15 @@ def RR(procesos, quantum):
         "Secuencia": secuencia
     }
         
+def calculo_metricas(procesos_terminados):
+    total_procesos = len(procesos_terminados)
 
+    prom_T = sum(p.tiempo_retorno for p in procesos_terminados) / total_procesos
+    prom_E = sum(p.tiempo_espera for p in procesos_terminados) / total_procesos
+    
+    prom_P = sum(p.tiempo_retorno / p.tiempo_servicio for p in procesos_terminados) / total_procesos
+
+    return (prom_T, prom_E, prom_P)
 
 procesos_prueba = proceso_aleatorio(5)
 
