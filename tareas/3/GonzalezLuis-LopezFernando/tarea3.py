@@ -279,22 +279,22 @@ def iniciar(rondas, carga=None):
     for r in range(rondas):
         print("- Ronda", r + 1, ":")
         
-        # Usamos una variable auxiliar para no "ensuciar" el valor original de carga
+        # Usando variable auxiliar
         if carga is None:
             carga_actual = generar_procesos()
         else:
             carga_actual = carga
         
-        # Generando texto (ahora usamos siempre carga_actual)
-        texto_carga = ""
-        suma_tiempos = 0
+        # Usando siempre variable carga_actual para generar texto
+        texto_carga= ""
+        suma_tiempos= 0
         for p in carga_actual:
-            texto_carga = texto_carga + p["nombre"] + ": " + str(p["llegada"]) + ", t=" + str(p["t"]) + "; "
-            suma_tiempos = suma_tiempos + p["t"]
+            texto_carga= texto_carga + p["nombre"] + ": " + str(p["llegada"]) + ", t=" + str(p["t"]) + "; "
+            suma_tiempos= suma_tiempos + p["t"]
             
         print("  " + texto_carga + " (tot:" + str(suma_tiempos) + ")")
         
-        # Ejecucion FCFS - Recuerda pasar siempre la carga_actual
+        # Ejecucion FCFS
         terminados, visual = algoritmo_fcfs(carga_actual)
         imprimir_resultados("FCFS", terminados, visual)
         
