@@ -259,7 +259,7 @@ procesos_prueba = proceso_aleatorio(5)
 res_fcfs = FCFS(copy.deepcopy(procesos_prueba))
 res_rr   = RR(copy.deepcopy(procesos_prueba), 1) 
 res_spn  = SPN(copy.deepcopy(procesos_prueba))
-res_fb   = FB(copy.deepcopy(procesos_prueba, 3, 1))
+res_fb   = FB(copy.deepcopy(procesos_prueba), 3, 1)
 
 lista_resultados = [res_fcfs, res_rr, res_spn, res_fb]
 
