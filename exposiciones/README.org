@@ -27,6 +27,7 @@
   | 11-mayo-2026 | Luis Adrián González Falcón y Fernando Samuel López Morales    | Evolución del protocolo X11 al protocolo Wayland en sistemas UNIX                  |         |                                        |                                                 |
   | 11-mayo-2026 | Sergio Quiroz Salazar                                          | /Edge Computing/                                                                   |         |                                        |                                                 |
   | 18-mayo-2026 | Santiago Arath Bello Sánchez y David Baruc López Romero        | ¿Por qué mi celular cierra apps /de la nada/? Gestión de memoria y el /OOM Killer/ |         |                                        |                                                 |
+  | 18-mayo-2026 | Josué Benjamín Garinay y Carlos Daniel López                   | Máquinas virtuales                                                                 |         |                                        |                                                 |
   |--------------+----------------------------------------------------------------+------------------------------------------------------------------------------------+---------+----------------------------------------+-------------------------------------------------|
   #+TBLFM: 
 
